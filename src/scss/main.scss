@@ -1,0 +1,159 @@
+$text-color: rgb(172, 172, 0);
+$step: -15px;
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    color: $text-color;
+    margin: 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+  }
+  h3 {
+    margin: 0;
+  }
+ 
+} 
+.lines {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+ 
+  hr {
+    flex: 0 0 150px;
+    height: 0.5px;
+    background-color: $text-color;
+  }
+}
+.person {
+  position: relative;
+  margin-top: 5em;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  svg {
+    color: $text-color;
+  }
+ .vertical__line {
+    position: absolute;  
+    width: 450px;
+    height: 0.5px;
+    transform: rotate(90deg);
+    top: 50%;
+    background-color: $text-color;
+}
+  .person__photo {
+  position: relative;
+  flex: 0 0 300px;
+  border: 1px solid $text-color;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .photo__sq {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 1px solid $text-color;
+  }
+  .top-right {
+    right: $step;
+    top: $step;
+    border: none;
+    border-top: 1px solid $text-color;
+    border-right: 1px solid $text-color;
+  }
+  .bottom-right {
+    right: $step;
+    bottom: $step;
+    border: none;
+    border-bottom: 1px solid $text-color;
+    border-right: 1px solid $text-color;
+  }
+  .bottom-left {
+    left: $step;
+    bottom: $step;
+    border: none;
+    border-bottom: 1px solid $text-color;
+    border-left: 1px solid $text-color;
+  }
+  .top-left {
+    left: $step;
+    top: $step;
+    border: none;
+    border-top: 1px solid $text-color;
+    border-left: 1px solid $text-color;
+  }
+}
+  .person__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .info__about {
+    width: 300px;
+    text-align: center;
+    }
+    hr {
+      width: 50px;
+      border-bottom: 1px solid $text-color;
+    }
+    .info__social {
+      svg {
+        border: 1px solid rgb(169, 169, 255);
+        border-radius: 50%;
+        padding: 5px;
+        color: rgb(169, 169, 255);
+      }
+    }
+    .person__lines {
+      display: flex;
+      width: 80px;
+      justify-content: center;
+      hr {
+        width: 25%;
+        margin: 1px;
+        height: 1px;
+        background-color: $text-color;
+      }
+      hr:nth-child(2){
+        flex: 1 0 30%;
+      }
+    }
+    button {
+      margin-top: 1em;
+      background-color: transparent;
+      border: 1px solid $text-color;
+      padding: 0.2em 1em;
+      text-transform: uppercase;
+      font-size: 0.7em;
+      outline: none;
+    }
+  }
+  }
+  .slider {
+    margin-top: 6em;
+    display: flex;
+    div {
+      margin: 0.5em;
+      width: 10px;
+      border-radius: 50%;
+      height: 10px;
+      background-color: $text-color;
+      border: 1px solid $text-color;
+      transition: 0.2s;
+    }
+    div:hover {
+      background-color: transparent;
+      transform: scale(1.5);
+    }
+  }
+

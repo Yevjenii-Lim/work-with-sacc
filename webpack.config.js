@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 
 module.exports = {
   entry: ['./src/scss/styles.scss'],
@@ -44,7 +46,7 @@ module.exports = {
           loader: 'url-loader',
           options: { 
               limit: 8000, // Convert images < 8kb to base64 strings
-              name: 'images/[hash]-[name].[ext]',
+              name: 'images/[name].[ext]',
               publicPath: '../',
               useRelativePaths: true
           } 
@@ -90,6 +92,7 @@ module.exports = {
     }]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'My Beets App',
       template: './src/index.html'
